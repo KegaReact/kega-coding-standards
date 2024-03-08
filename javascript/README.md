@@ -150,6 +150,9 @@
     });
 
     const events = new Event();
+
+    Event.js
+    
     ```
 
 <a name="naming--camelCase-default-export"></a><a name="4.3"></a>
@@ -184,6 +187,18 @@
     import ClassName from './ClassName';
     ```
     
+<a name="naming--directories"></a><a name="4.5"></a>
+- [4.5](#naming--directories) Do not use camelCase or PascalCase for filenames
+
+    ```javascript
+    // bad
+    ./functionsName/functionsName.js
+    ./ClassName/ClassName.js
+    
+    // good
+    ./functions_name/functionsName.js
+    ./class_name/ClassName.js
+    ```
     **[⬆ back to top](#table-of-contents)**
 
 ## Functions
