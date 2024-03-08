@@ -414,7 +414,7 @@
     console.log(user.firstname);
 
     // good
-    if ((user?.firstname) {
+    if (user?.firstname) {
       console.log(user.firstname);
     }
   
