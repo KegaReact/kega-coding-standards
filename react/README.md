@@ -16,51 +16,51 @@
   <a name="component-structure"></a><a name="1.1"></a>
   - [1.1](#component-structure) Basic structure of a react component
    
-  ```javascript
-  const Component = () => {
-      // Hooks
+    ```javascript
+    const Component = () => {
+        // Hooks
 
-      // Callback functions
+        // Callback functions
 
-      return (
-          <div>
-              <h1>Component<h1/>
-          </div>
-      );
-  }
-  ```
+        return (
+            <div>
+                <h1>Component<h1/>
+            </div>
+        );
+    }
+    ```
 
 ## Props
   <a name="naming"></a><a name="1.1"></a>
   - [1.1](#naming) Use soft tabs (space character) set to 4 spaces. eslint: [`indent`](https://eslint.org/docs/rules/indent)
    
-  ```javascript
+    ```javascript
 
-  ```
+    ```
 
 ## Alignment
   <a name="alignment"></a><a name="1.1"></a>
   - [1.1](#alignment) Alignment
    
-  ```javascript
+    ```javascript
 
-  ```
+    ```
 
 ## Quotes
   <a name="quotes"></a><a name="1.1"></a>
   - [1.1](#quotes) Quotes
    
-  ```javascript
+    ```javascript
 
-  ```
+    ```
 
 ## Spacing
   <a name="spacing"></a><a name="1.1"></a>
   - [1.1](#spacing) Spacing
    
-  ```javascript
+    ```javascript
 
-  ```
+    ```
 
 ## CSS
   <a name="css-inline"></a><a name="1.1"></a>
