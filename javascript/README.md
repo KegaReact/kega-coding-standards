@@ -37,7 +37,7 @@
     const array = [0,1,2,3];
 
     // good
-    const object = { attr:'value', attr2:'value2' };
+    const object = { attr: 'value', attr2: 'value2' };
     const array = [ 0, 1, 2, 3 ];
     ```
     
