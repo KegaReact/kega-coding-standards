@@ -400,5 +400,24 @@
     const age = user.age ?? 18;
     // returns 18
     ```
+    
+  <a name="comparison--object-attribute"><a name="7.6"></a>
+  - [7.6](#comparison--object-attribute) Optional chaining (?.) check
+
+    > Why? It provides a simple check to see if a object is not undefined and has a specific attribute 
+
+    ```javascript
+
+    const user = undefined;
+    
+    // bad
+    console.log(user.firstname);
+
+    // good
+    if ((user?.firstname) {
+      console.log(user.firstname);
+    }
+  
+    ```
 
     
