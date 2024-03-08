@@ -134,7 +134,7 @@
     > Why? It is clear for other developers it is clear when the variable or function is for.
 
 <a name="naming--PascalCase"></a><a name="4.2"></a>
-  - [4.2](#naming--PascalCase) Use PascalCase only when naming constructors or classes. eslint: [`new-cap`](https://eslint.org/docs/rules/new-cap)
+- [4.2](#naming--PascalCase) Use PascalCase only when naming constructors or classes. eslint: [`new-cap`](https://eslint.org/docs/rules/new-cap)
     
     ```javascript
     // bad
@@ -153,7 +153,7 @@
     ```
 
 <a name="naming--camelCase-default-export"></a><a name="4.3"></a>
-  - [4.3](#naming--camelCase-default-export) Use camelCase for functions, variables and filenames
+- [4.3](#naming--camelCase-default-export) Use camelCase for functions, variables and filenames. eslint: [`camelcase`](https://eslint.org/docs/rules/camelcase)
     
     ```javascript
     // bad
@@ -171,6 +171,18 @@
     functionsName.js
     ```
 
-**[⬆ back to top](#table-of-contents)**
+<a name="naming--filename-matches-export"></a><a name="4.4"></a>
+- [4.4](#naming--filename-matches-export) A base filename should exactly match the name of its default export.
 
+    ```javascript
 
+    // bad
+    import FunctionsName from './functionsName';
+    import className from './ClassName';
+
+    // good
+    import functionsName from './functionsName';
+    import ClassName from './ClassName';
+    ```
+    
+    **[⬆ back to top](#table-of-contents)**
