@@ -27,7 +27,7 @@
     }
     ```
   <a name="whitespace--padding"></a><a name="1.2"></a>
-  - [1.1](#whitespace--padding) Object & Array whitspace padding
+  - [1.2](#whitespace--padding) Object & Array whitspace padding
    
     > Why? Keeps the code consistent over all developer.
 
