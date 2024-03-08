@@ -4,7 +4,11 @@
   1. [Whitespace](#whitespace)
   1. [Variable](#variable)
   1. [Semicolons and Quotes](#semicolons-and-quotes)
-
+  1. [Naming Conventions](#naming-conventions)
+  1. [Functions](#functions)
+  1. [Destructuring](#destructuring)
+  1. [Comparison Operators & Equality](#comparison-operators--equality)]
+     
   ## Whitespace
   <a name="whitespace--spaces"></a><a name="1.1"></a>
   - [1.1](#whitespace--spaces) Use soft tabs (space character) set to 4 spaces. eslint: [`indent`](https://eslint.org/docs/rules/indent)
@@ -105,7 +109,6 @@
 <a name="quotes"></a><a name="3.2"></a>
 - [3.2](#quotes) Use single quotes `''` for strings. eslint: [`quotes`](https://eslint.org/docs/rules/quotes)
 
-  > Why? 
   ```javascript
   // bad
   const name = "Tim";
@@ -122,3 +125,52 @@
   ```
 
 **[⬆ back to top](#table-of-contents)**
+
+## Naming Conventions
+
+<a name="naming--descriptive"></a><a name="4.1"></a>
+  - [4.1](#naming--descriptive) Use descriptive variable and function names.
+    
+    > Why? It is clear for other developers it is clear when the variable or function is for.
+
+<a name="naming--PascalCase"></a><a name="4.2"></a>
+  - [4.2](#naming--PascalCase) Use PascalCase only when naming constructors or classes. eslint: [`new-cap`](https://eslint.org/docs/rules/new-cap)
+    
+    ```javascript
+    // bad
+    const events = () => {
+        return {};
+    });
+
+    const events = new event();
+
+    // good
+    const Events = () => {
+        return {};
+    });
+
+    const events = new Event();
+    ```
+
+<a name="naming--camelCase-default-export"></a><a name="4.3"></a>
+  - [4.3](#naming--camelCase-default-export) Use camelCase for functions, variables and filenames
+    
+    ```javascript
+    // bad
+    const long_variable_name = 0;
+
+    const functions_name = () => {}
+
+    functions_name.js
+
+    // good
+    const longVariableName = 0;
+
+    const functionsName = () => {}
+
+    functionsName.js
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
