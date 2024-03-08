@@ -26,6 +26,20 @@
     ∙∙∙∙let name;
     }
     ```
+  <a name="whitespace--padding"></a><a name="1.2"></a>
+  - [1.1](#whitespace--padding) Object & Array whitspace padding
+   
+    > Why? Keeps the code consistent over all developer.
+
+    ```javascript
+    // bad
+    const object = {attr:'value',attr2:'value2'};
+    const array = [0,1,2,3];
+
+    // good
+    const object = { attr:'value', attr2:'value2' };
+    const array = [ 0, 1, 2, 3 ];
+    ```
     
   ## Variable
   <a name="variables--const"></a><a name="2.1"></a>
