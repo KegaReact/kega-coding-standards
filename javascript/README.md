@@ -175,7 +175,6 @@
 - [4.4](#naming--filename-matches-export) A base filename should exactly match the name of its default export.
 
     ```javascript
-
     // bad
     import FunctionsName from './functionsName';
     import className from './ClassName';
@@ -186,3 +185,22 @@
     ```
     
     **[⬆ back to top](#table-of-contents)**
+
+## Functions
+
+<a name="functions--declarations"></a><a name="5.1"></a>
+  - [5.1](#functions--declarations) Function declarations.
+
+    ```javascript
+    // bad
+    function foo() {
+    }
+
+    // good
+    const foo = () => {
+    }
+    ```
+    
+    **[⬆ back to top](#table-of-contents)**
+
+
