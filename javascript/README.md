@@ -7,7 +7,7 @@
   1. [Naming Conventions](#naming-conventions)
   1. [Functions](#functions)
   1. [Destructuring](#destructuring)
-  1. [Comparison Operators & Equality](#comparison-operators--equality)]
+  1. [Comparison Operators & Equality](#comparison-operators--equality)
      
   ## Whitespace
   <a name="whitespace--spaces"></a><a name="1.1"></a>
@@ -218,4 +218,187 @@
     
     **[⬆ back to top](#table-of-contents)**
 
+## Destructuring
 
+  <a name="destructuring--object"></a><a name="6.1"></a>
+  - [6.1](#destructuring--object) Use object destructuring when accessing and using multiple properties of an object. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
+
+    > Why? Destructuring saves you from creating temporary references for those properties, and from repetitive access of the object. Repeating object access creates more repetitive code, requires more reading, and creates more opportunities for mistakes.
+    
+    ```javascript
+    // bad
+    const getFullName = (user) => {
+      const firstName = user.firstName;
+      const lastName = user.lastName;
+
+      return `${firstName} ${lastName}`;
+    }
+
+    // good
+    const getFullName = (user) = {
+      const { firstName, lastName } = user;
+      return `${firstName} ${lastName}`;
+    }
+
+    // best
+    const getFullName = ({ firstName, lastName }) {
+      return `${firstName} ${lastName}`;
+    }
+    ```
+    
+  <a name="destructuring--array"></a><a name="6.2"></a>
+  - [6.2](#destructuring--array) Use array destructuring. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
+
+    ```javascript
+    const arr = [1, 2, 3, 4];
+
+    // bad
+    const first = arr[0];
+    const second = arr[1];
+
+    // good
+    const [ first, second ] = arr;
+    ```
+  <a name="destructuring--object"></a><a name="6.3"></a>
+  - [6.3](#destructuring--object) Use object destructuring.
+
+    ```javascript
+    const user = { firstname: 'Tim', lastname: 'Honders' }
+
+    // bad
+    const firstname = user.firstname;
+    const lastname = user.lastname;
+
+    // good
+    const { firstname, lastname } = user;
+    ```
+  <a name="destructuring--object-fallback"></a><a name="6.4"></a>
+  - [6.4](#destructuring--object-fallback) Use fallback values when destructuring an object.
+
+    > Why? When trying to destruct an object that is undefined it will generate an error and crash de application.
+
+    ```javascript
+    const user = undefined
+
+    // bad
+    const { firstname, lastname } = user; // Cannot destructure property 'firstname' of 'user' as it is undefined.
+    
+    // good
+    const { firstname='', lastname='' } = user || {}; 
+    ```
+  <a name="destructuring--object-alias"></a><a name="6.5"></a>
+  - [6.5](#destructuring--object-fallback) Use aliases when there is a name collision
+
+    ```javascript
+    const user = { firstname: 'Tim', lastname: 'Honders' }
+
+    const { firstname: firtnameAlias, lastname='' } = user || {}; 
+    ```
+
+- For more information refer to [Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+    
+  **[⬆ back to top](#table-of-contents)**
+
+## Comparison Operators & Equality
+
+  <a name="comparison--eqeqeq"></a><a name="7.1"></a>
+  - [7.1](#comparison--eqeqeq) Use `===` and `!==` over `==` and `!=`. eslint: [`eqeqeq`](https://eslint.org/docs/rules/eqeqeq)
+
+  <a name="comparison--if"></a><a name="7.2"></a>
+  - [7.2](#comparison--if) Conditional statements such as the `if` statement evaluate their expression using coercion with the `ToBoolean` abstract method and always follow these simple rules:
+
+    - **Objects** evaluate to **true**
+    - **Array** evaluate to **true**
+    - **Undefined** evaluates to **false**
+    - **Null** evaluates to **false**
+    - **Booleans** evaluate to **the value of the boolean**
+    - **Numbers** evaluate to **false** if **+0, -0, or NaN**, otherwise **true**
+    - **Strings** evaluate to **false** if an empty string `''`, otherwise **true**
+
+  <a name="comparison--shortcuts"></a><a name="7.3"></a>
+  - [7.3](#comparison--shortcuts) Use shortcuts for booleans, but explicit comparisons for strings and numbers.
+
+    ```javascript
+    // bad
+    if (isValid === true) {}
+
+    // good
+    if (isValid) {}
+
+    // bad
+    if (name) {}
+
+    // good
+    if (name !== '') {}
+
+    // bad
+    if (collection.length) {}
+
+    // good
+    if (collection.length > 0) {}
+    ```
+  <a name="comparison--nested-ternaries"></a><a name="7.4"></a>
+  - [7.4](#comparison--nested-ternaries) Ternaries should not be nested and generally be single line expressions. eslint: [`no-nested-ternary`](https://eslint.org/docs/rules/no-nested-ternary)
+
+    ```javascript
+    // bad
+    const foo = maybe1 > maybe2
+      ? "bar"
+      : value1 > value2 ? "baz" : null;
+
+    // split into 2 separated ternary expressions
+    const maybeNull = value1 > value2 ? 'baz' : null;
+
+    // better
+    const foo = maybe1 > maybe2
+      ? 'bar'
+      : maybeNull;
+
+    // best
+    const foo = maybe1 > maybe2 ? 'bar' : maybeNull;
+    ```
+
+  <a name="comparison--unneeded-ternary"></a><a name="7.5"></a>
+  - [7.5](#comparison--unneeded-ternary) Avoid unneeded ternary statements. eslint: [`no-unneeded-ternary`](https://eslint.org/docs/rules/no-unneeded-ternary)
+
+    ```javascript
+    // bad
+    const foo = a ? a : b;
+    const bar = c ? true : false;
+    const baz = c ? false : true;
+    const quux = a != null ? a : b;
+
+    // good
+    const foo = a || b;
+    const bar = !!c;
+    const baz = !c;
+    const quux = a ?? b;
+    ```
+  <a name="nullish-coalescing-operator"><a name="7.5"></a>
+  - [7.5](#nullish-coalescing-operator) The nullish coalescing operator (`??`) is a logical operator that returns its right-hand side operand when its left-hand side operand is `null` or `undefined`. Otherwise, it returns the left-hand side operand.
+
+    > Why? It provides precision by distinguishing null/undefined from other falsy values, enhancing code clarity and predictability.
+
+    ```javascript
+    // bad
+    const value = 0 ?? 'default';
+    // returns 0, not 'default'
+
+    // bad
+    const value = '' ?? 'default';
+    // returns '', not 'default'
+
+    // good
+    const value = null ?? 'default';
+    // returns 'default'
+
+    // good
+    const user = {
+      name: 'John',
+      age: null
+    };
+    const age = user.age ?? 18;
+    // returns 18
+    ```
+
+    
