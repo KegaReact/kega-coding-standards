@@ -1,6 +1,7 @@
 # React
 
 ## Table of Contents
+  1. [Basic rules](#basic-rules)
   1. [Component structure](#component-structure)
   1. [Props](#props)
   1. [Alignment](#alignment)
@@ -8,9 +9,10 @@
   1. [Spacing](#spacing)
   1. [CSS](#CSS)
    
-## Choices
-- No CSS Modules
-- No typescript
+## Basic rules
+  <a name="basic-rules"></a><a name="1.1"></a>
+  - Only include one React component per file.
+
 
 ## Component structure
   <a name="component-structure"></a><a name="1.1"></a>
@@ -19,16 +21,33 @@
     ```javascript
     const Component = () => {
         // Hooks
+        const dispatch = useDispatch();
+        const value = useValue();
+    
+        const { data } = useData();
+        const { otherData } = useOtherData();
+
+        const [ state, setState ] = useState();
+
+        // Effects
+        useEffect(() => {}, []);
+        useMemo(() => {}, []);
 
         // Callback functions
-
+        const onClick = () => {
+        }
+      
         return (
             <div>
                 <h1>Component<h1/>
+                <button onClick={onClick}>Button</button>
             </div>
         );
     }
+
+    export default Component;
     ```
+     > Try to keep the component readable, keep the variables & functions in the structure as shown above. Sort the hooks on return types value, {}, [] then effects like useEffect and callbacks. This way other developers know where to look when they need to work in youre code.
 
 ## Props
   <a name="naming"></a><a name="1.1"></a>
@@ -75,3 +94,7 @@
     ```javascript
 
     ```
+## Choices
+- CSS Modules
+- No typescript
+
