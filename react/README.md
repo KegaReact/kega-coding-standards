@@ -49,38 +49,112 @@
     ```
      > Try to keep the component readable, keep the variables & functions in the structure as shown above. Sort the hooks on return types value, {}, [] then effects like useEffect and callbacks. This way other developers know where to look when they need to work in youre code.
 
+ <a name="component-import-structure"></a><a name="1.2"></a>
+ - [1.2](#component-import-structure) Basic import structure
+   ```javascript
+   // React imports
+   import { useState, useMemo, useEffect } from 'react';
+
+   // 3 party imports
+   import classNames from 'classnames';
+
+   // Own componets import
+   import { Button } from '@/components/button';
+   import { Col, Row, Container } from '@/components/grid';
+
+   import useData from '@/hooks/useData';
+   import useOtherData from '@/hooks/useOtherData';
+
+   // Style import
+   import classes from './Component.module.css';
+   
+   const Component = () => {
+        ...
+   }
+   ```
+   > Try to keep the import in the structure as shown above. Sort the imports on imported types value, {}, useHook and imports from specific direcories like lib of modules or functions. This keeps the component file readable for other developers.
+
 ## Props
-  <a name="naming"></a><a name="1.1"></a>
-  - [1.1](#naming) Use soft tabs (space character) set to 4 spaces. eslint: [`indent`](https://eslint.org/docs/rules/indent)
-   
-    ```javascript
+  <a name="props"></a><a name="2.1"></a>
+  - [2.1](#props) Naming props for Components
 
+    Use camelCase for prop names for functions and hooks, or PascalCase for Components
+
+    ```javascript 
+     // bad
+     const Component = ({ variabe_name, component }) => { }
+
+     // good
+     const Component = ({ variabeName, Component }) => { }
     ```
+  <a name="props-fallback"></a><a name="2.2"></a>
+  - [2.2](#props-fallback) Use fallback values if pros are optional or the value never should be undefined.
 
+    ```javascript 
+     // bad
+     const Component = ({ name, optional }) => { }
+
+     // good
+     const Component = ({ name, optional=false }) => { }
+    ```
+    > If the prop isn't set it will be undefined this can cause problems.
 ## Alignment
-  <a name="alignment"></a><a name="1.1"></a>
-  - [1.1](#alignment) Alignment
+  <a name="alignment"></a><a name="3.1"></a>
+  - [3.1](#alignment) Alignment 
    
     ```javascript
+     // bad
+     <Component props1="has a value" props2="has an other value" props3="has an other value" props4="has more value" props5="has more value" />
 
+     // good
+     <Component
+         props1="has a value"
+         props2="has an other value"
+         props3="has an other value"
+         props4="has more value" props5="has more value"
+     />
     ```
-
+    > Try to align youre code so it is easy to read on every type of screen.
+    
 ## Quotes
-  <a name="quotes"></a><a name="1.1"></a>
-  - [1.1](#quotes) Quotes
-   
+  <a name="quotes"></a><a name="4.1"></a>
+  - [4.1](#quotes) Quotes, use double quotes (") for JSX attributes, but single quotes (') for all other JS.
+
+    > Why? Regular HTML attributes also typically use double quotes instead of single, so JSX attributes mirror this convention.
+
     ```javascript
-
+    // bad
+    <Component bar='bar' />
+    
+    // good
+    <Component bar="bar" />
+    
+    // bad
+    <Component style={{ left: "20px" }} />
+    
+    // good
+    <Component style={{ left: '20px' }} />
     ```
-
+    
 ## Spacing
-  <a name="spacing"></a><a name="1.1"></a>
-  - [1.1](#spacing) Spacing
+  <a name="spacing"></a><a name="5.1"></a>
+  - [5.1](#spacing) Spacing
    
     ```javascript
+    // bad
+    <Component style={{left:'20px'}} />
+    <Component style={ {left:'20px'} } />
+    
+    const Component = ( { name, optional = false } ) => { }
 
+    // good
+    <Component style={{ left: '20px' }} />
+    
+    const Component = ({ name, optional=false }) => { }
     ```
 
+    > Try to space your props as shown above. all code bases have consistent readable code.
+    
 ## CSS
   <a name="css-inline"></a><a name="1.1"></a>
   - [1.1](#css-inline) Inline styles
