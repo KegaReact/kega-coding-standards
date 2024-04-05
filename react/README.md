@@ -7,7 +7,8 @@
   1. [Alignment](#alignment)
   1. [Quotes](#quotes)
   1. [Spacing](#spacing)
-  1. [CSS](#CSS)
+  1. [CSS](#css)
+  1. [Hook dependencies](#hook-dependencies)
    
 ## Basic rules
   <a name="basic-rules"></a><a name="1.1"></a>
@@ -156,18 +157,59 @@
     > Try to space your props as shown above. all code bases have consistent readable code.
     
 ## CSS
-  <a name="css-inline"></a><a name="1.1"></a>
-  - [1.1](#css-inline) Inline styles
+  <a name="css"></a><a name="6.1"></a>
+  - [6.1](#css) Inline styles
    
     ```javascript
 
     ```
-  <a name="css-modules"></a><a name="1.1"></a>
-  - [1.1](#css-modules) CSS Modules
+  <a name="css-modules"></a><a name="6.2"></a>
+  - [6.2](#css-modules) CSS Modules
    
     ```javascript
 
     ```
+## Hook dependencie
+  <a name="hook-dependencies"></a><a name="7.1"></a>
+  - [7.1](#hook-dependencies) Hook dependencies
+   
+    ```javascript
+    // bad
+    
+    const obj = { test: 'test' }
+    obj.test = 'test1';
+  
+    useEffect(() => {}, [ obj ]); // Will not trigger
+
+    const arr = [ 0, 1, 2 ];
+    arr.push(3);
+    
+    useEffect(() => {}, [ arr ]); // Will not trigger
+
+    // good
+    
+    let obj = { test: 'test' }
+    obj.test = 'test1';
+
+    useEffect(() => {}, [ obj.test ]); // Will trigger
+
+    or
+    
+    obj = {
+      ...obj,
+      test: 'test1'
+    }
+    
+    useEffect(() => {}, [ obj ]); // Will trigger
+
+    let arr = [ 0, 1, 2 ];
+    arr = [ ...arr, 3 ];
+    
+    useEffect(() => {}, [ arr ]); // Will trigger
+
+    ```
+    > React compares the values in the dependency array when there is a change the hook wil trigger but for objects or array only the reference is checked not the content of an object or array. So make shure an array or object is cloned.
+     
 ## Choices
 - CSS Modules
 - No typescript
