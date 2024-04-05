@@ -27,8 +27,9 @@
     }
     ```
   <a name="whitespace--padding"></a><a name="1.2"></a>
-  - [1.2](#whitespace--padding) Object & Array whitspace padding eslint: [`object-curly-spacing`](https://eslint.org/docs/latest/rules/object-curly-spacing), [`array-bracket-spacing`](https://eslint.org/docs/latest/rules/array-bracket-spacing)
-   
+  - [1.2](#whitespace--padding) Object & Array whitspace padding eslint: [`object-curly-spacing`](https://eslint.org/docs/latest/rules/object-curly-spacing), [`array-bracket-spacing`](https://eslint.org/docs/latest/rules/array-bracket-spacing), [`comma-spacing`](https://eslint.org/docs/latest/rules/comma-spacing)
+
+
     > Why? Keeps the code easy to read.
 
     ```javascript
