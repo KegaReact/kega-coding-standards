@@ -1,5 +1,8 @@
 # React
 
+> [!NOTE]
+> This coding standard is written for React 18, [React 19](https://react.dev/blog/2024/02/15/react-labs-what-we-have-been-working-on-february-2024) is on the horizon so when this is released this can change. 
+
 ## Table of Contents
   1. [Basic rules](#basic-rules)
   1. [Component structure](#component-structure)
