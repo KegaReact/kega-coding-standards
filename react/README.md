@@ -8,7 +8,7 @@
   1. [Quotes](#quotes)
   1. [Spacing](#spacing)
   1. [CSS](#css)
-  1. [Hook dependencies](#hook-dependencies)
+  1. [Mutability](#mutability)
    
 ## Basic rules
   <a name="basic-rules"></a><a name="1.1"></a>
@@ -160,20 +160,53 @@
   <a name="css"></a><a name="6.1"></a>
   - [6.1](#css) Inline styles
    
-    ```javascript
-
-    ```
+    Try avoid using inline styling, it can hurt performance & a lot of css inline can clutter your code.
+    
   <a name="css-modules"></a><a name="6.2"></a>
   - [6.2](#css-modules) CSS Modules
-   
+
+    Name your module css file the same as the component it is used in.
+
+    ```css
+    .root {
+        padding: 16px;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+    ```
+    
     ```javascript
 
+    import classes from './Component.module.css';
+
+    const Component = () => {
+
+        return (
+            <div className={classes.root}>
+                <h1 className={classes.heading}>Component<h1/>
+            </div>
+        );
+    }
+    
     ```
-## Hook dependencie
-  <a name="hook-dependencies"></a><a name="7.1"></a>
+    
+## Mutability
+  <a name="mutability"></a><a name="7.1"></a>
+  - [7.1](#mutability) Mutability
+
+
+    ```javascript
+
+  
+    ```
+    
+  <a name="hook-dependencies"></a><a name="7.2"></a>
   - [7.1](#hook-dependencies) Hook dependencies
    
     ```javascript
+    
     // bad
     
     const obj = { test: 'test' }
