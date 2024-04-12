@@ -88,7 +88,7 @@
 ## File naming
   <a name="file-naming"></a><a name="2.1"></a>
   - [2.1](#file-naming) File naming
-    Nextjs has preserved namse for specific files like layout.js, page.js, error.js , ...
+    Nextjs has preserved names for specific files like layout.js, page.js, error.js , ...
     
     ```
     // bad
@@ -119,7 +119,12 @@
     
     └── ...
     ```
-
+    > This way the file/dir structure stays clear and its easy to spot witch css file belongs to witch js file.
+  
+  <a name="component-naming"></a><a name="2.2"></a>
+  - [2.](#component-naming) Component naming of preserved filenalse (page.js)
+    
+    
 ## Server component
   <a name="server-component"></a><a name="3.1"></a>
   - [3.1](#server-component) Server component
