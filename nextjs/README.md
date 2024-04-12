@@ -96,13 +96,13 @@
     ├── ...
     ├── app
     │   └── [storeCode]
-            └── account
-                ├── details
-                ├── Navigation.moduel.css
-                ├── layout.js
-                ├── page.js
-                └── OverviewPage.module.css
-    
+    │       └── account
+    │           ├── details
+    │           ├── Navigation.moduel.css
+    │           ├── layout.js
+    │           ├── page.js
+    │           └── OverviewPage.module.css
+    │           
     └── ...
 
     // good
@@ -110,13 +110,13 @@
     ├── ...
     ├── app
     │   └── [storeCode]
-            └── account
-                ├── details
-                ├── layout.moduel.css
-                ├── layout.js
-                ├── page.js
-                └── page.module.css
-    
+    │       └── account
+    │           ├── details
+    │           ├── layout.moduel.css
+    │           ├── layout.js
+    │           ├── page.js
+    │           └── page.module.css
+    │           
     └── ...
     ```
     > This way the file/dir structure stays clear and its easy to spot witch css file belongs to witch js file.
