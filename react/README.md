@@ -168,6 +168,8 @@
     Name your module css file the same as the component it is used in.
 
     ```css
+     // filename: Component.module.css
+    
     .root {
         padding: 16px;
     }
@@ -176,7 +178,7 @@
         font-size: 2rem;
     }
     ```
-    
+
     ```javascript
 
     import classes from './Component.module.css';
