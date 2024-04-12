@@ -255,4 +255,4 @@
 - No typescript
 
 ## Documentation
-[Official react documentation] (https://react.dev/reference/react)
+Official [React](https://react.dev/reference/react) documentation.
