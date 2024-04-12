@@ -205,7 +205,7 @@
     ```
     
   <a name="hook-dependencies"></a><a name="7.2"></a>
-  - [7.1](#hook-dependencies) Dependencies in React
+  - [7.2](#hook-dependencies) Dependencies in React
 
     ```javascript
     
@@ -223,7 +223,7 @@
 
     // good
     
-    let obj = { test: 'test' }
+    const obj = { test: 'test' }
     obj.test = 'test1';
 
     useEffect(() => {}, [ obj.test ]); // Will trigger
