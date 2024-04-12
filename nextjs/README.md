@@ -88,7 +88,7 @@
 ## File naming
   <a name="file-naming"></a><a name="2.1"></a>
   - [2.1](#file-naming) File naming
-    Nextjs has preserved names for specific files like layout.js, page.js, error.js , ...
+    Nextjs has reserved names for specific files like layout.js, page.js, error.js , ...
     
     ```
     // bad
@@ -122,8 +122,31 @@
     > This way the file/dir structure stays clear and its easy to spot witch css file belongs to witch js file.
   
   <a name="component-naming"></a><a name="2.2"></a>
-  - [2.](#component-naming) Component naming of preserved filenalse (page.js)
+  - [2.](#component-naming) Component naming of reserved files (page.js)
+
+    There are 2 options we need to make a choice, in de js naming convention we decidet that the filenam needs to be te same as the Component name.
+    The problem in Nextjs is ther wil be a lot of the same file names page.js this wil make it hard to se witch file is open in youre code editor.
+    So we have 2 options:
     
+    ```javascript
+    
+    // page.js
+    import classes from './page.module.css';
+    
+    cons Page = () => {
+    }
+    
+    ```
+
+    ```javascript
+    
+    // page.js
+    import classes from './page.module.css';
+    
+    cons HomePage = () => {
+    }
+    
+    ```
     
 ## Server component
   <a name="server-component"></a><a name="3.1"></a>
