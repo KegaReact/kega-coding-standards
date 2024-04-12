@@ -8,7 +8,7 @@
   1. [Quotes](#quotes)
   1. [Spacing](#spacing)
   1. [CSS](#css)
-  1. [Mutability](#mutability)
+  1. [Mutability & dependencies](#mutability-dependencies)
    
 ## Basic rules
   <a name="basic-rules"></a><a name="1.1"></a>
@@ -195,18 +195,18 @@
     ```
     
 ## Mutability
-  <a name="mutability"></a><a name="7.1"></a>
-  - [7.1](#mutability) Mutability
+  <a name="mutability-dependencies"></a><a name="7.1"></a>
+  - [7.1](#mutability-dependencies) Mutability & dependencies
 
-
+    
     ```javascript
 
   
     ```
     
   <a name="hook-dependencies"></a><a name="7.2"></a>
-  - [7.1](#hook-dependencies) Hook dependencies
-   
+  - [7.1](#hook-dependencies) Dependencies in React
+
     ```javascript
     
     // bad
