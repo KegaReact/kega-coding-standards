@@ -77,6 +77,8 @@
    }
    ```
    > Try to keep the import in the structure as shown above. Sort the imports on imported types value, {}, useHook and imports from specific direcories like lib of modules or functions. This keeps the component file readable for other developers.
+ <a name="exporting"></a><a name="1.3"></a>
+ - [1.3](#exporting) Exporting from index.js
 
 ## Props
   <a name="props"></a><a name="2.1"></a>
@@ -247,8 +249,10 @@
 
     ```
     > React compares the values in the dependency array when there is a change the hook wil trigger but for objects or array only the reference is checked not the content of an object or array. So make shure an array or object is cloned.
-     
+    
 ## Choices
 - CSS Modules
 - No typescript
 
+## Documentation
+[Official react documentation] (https://react.dev/reference/react)
