@@ -151,10 +151,18 @@
 ## Server component
   <a name="server-component"></a><a name="3.1"></a>
   - [3.1](#server-component) Server component
-  - 
+    
+    Server Components are components that are rendered exclusively on the server and sent to the client as HTML. They enable developers to write components that can directly access server-side data sources, and their code is not included in the client-side JavaScript bundle. This can lead to performance improvements, as less JavaScript needs to be downloaded, parsed, and executed on the client. However, since they're rendered on the server, they cannot handle user interactions or have state. They are intended to be used alongside traditional client components to create a balance between performance and interactivity.
+
 ## Client component
   <a name="client-component"></a><a name="4.1"></a>
   - [4.1](#client-component) Client component
+
+    Client Components are components that run in the browser. They can maintain their own state, handle user interactions, and can be rendered on the server for initial page loads or on the client for subsequent interactions and updates.
+
+    Client Components are included in the client-side JavaScript bundle, which means they can increase the size of the bundle that needs to be downloaded, parsed, and executed on the client.
+
+    They can fetch data from the server and update the UI in response to user interactions. They can also use effects, lifecycle methods, and other features of React.
 
 ## 2 Worlds (client/server)
   <a name="2-worlds"></a><a name="5.1"></a>
