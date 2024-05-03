@@ -250,9 +250,11 @@
    
     Try to keep the use of external plugins to a minimum, plugins can have a load of overhead code what will result in larger bundle sizes. The more plugins the more dependencies you create to other projects. 
     
-    
 ## Choices
 - CSS Modules
+  For css we use CSS Modules this way the css is written in pure css and not in a plugin specific syntax. This reduces the dependency to other libraries and this wil make migrating to other frameworks or plugins easier in the future.
+
+  Also for developer this is better way to learn or keep knowledge of pure css and not one specific library.
   
 - No typescript
 
