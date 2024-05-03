@@ -257,6 +257,11 @@
   Also for developer this is better way to learn or keep knowledge of pure css and not one specific library.
   
 - No typescript
+  Swiching to typescript wil bring more complexity an wil add a learning curve for new and existing developers. Also it wil change the syntax of the new codebase's. 
+
+  At this time the cons ate out weighing the benefits.
+
+  If the is a need for typesafty in the future we need to research if we wan't typescript or a sulotion like JSDOC. 
 
 ## Documentation
 Official [React](https://react.dev/reference/react) documentation.
