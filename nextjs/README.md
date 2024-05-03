@@ -5,10 +5,9 @@
   1. [File naming](#file-naming)
   1. [Server component](#server-component)
   1. [Client component](#client-component)
-  1. [2 Worlds (client/server)](#2-worlds)
-  1. [Sharing data client/server](#sharing-data)
 
 ## Basic rules
+- Keep your code clean and readable.
 
 ## Directory structure
   <a name="directory-structure"></a><a name="1.1"></a>
@@ -149,25 +148,25 @@
     ```
     
 ## Server component
-  <a name="server-component"></a><a name="3.1"></a>
-  - [3.1](#server-component) Server component
+  <a name="server-component"></a><a name="3"></a>
+  - [3](#server-component) Server component
     
-    Server Components are components that are rendered exclusively on the server and sent to the client as HTML. They enable developers to write components that can directly access server-side data sources, and their code is not included in the client-side JavaScript bundle. This can lead to performance improvements, as less JavaScript needs to be downloaded, parsed, and executed on the client. However, since they're rendered on the server, they cannot handle user interactions or have state. They are intended to be used alongside traditional client components to create a balance between performance and interactivity.
+    Server Components are components that are rendered exclusively on the server and sent to the client as HTML the JavaScript wil not be send to the client.
+
+    When loading async data in a Server Components the server wil wait until the date is loaded en serve the HTML to the client. This can cause slow loading page's.
+    To prevent this use a good chaching strategy or wrap the server component in a suspense so the HTML gets streamd to the client.
+
+    Server Components wil run only once on the server and do not have state so you can't use useState of useEffect
+    
+    Keep in mind when u use a Server Components in a Client Components the Server Components wil no longer be a Server Components and the js wil be send to de client.
+    
 
 ## Client component
-  <a name="client-component"></a><a name="4.1"></a>
-  - [4.1](#client-component) Client component
+  <a name="client-component"></a><a name="4"></a>
+  - [4](#client-component) Client component
 
-    Client Components are components that run in the browser. They can maintain their own state, handle user interactions, and can be rendered on the server for initial page loads or on the client for subsequent interactions and updates.
+    Client Components is a slightly confusing discritpion of what this component is, it is not a component that only runs in the browser. A Client Components first runs on the server to produce the HTML for server side rendering en wil be send to the client aling with the JavaScript of the component.
 
-    Client Components are included in the client-side JavaScript bundle, which means they can increase the size of the bundle that needs to be downloaded, parsed, and executed on the client.
+    There are ways to only run a Client Components on the browser this wil show up later in the browser so keep in mind ta add a fallback or loading state so it not causes unwanted behavior.
+    
 
-    They can fetch data from the server and update the UI in response to user interactions. They can also use effects, lifecycle methods, and other features of React.
-
-## 2 Worlds (client/server)
-  <a name="2-worlds"></a><a name="5.1"></a>
-  - [5.1](#2-worlds) 2 Worlds (client/server)
-
-## Sharing data client/server
-  <a name="sharing-data"></a><a name="5.1"></a>
-  - [5.1](#sharing-data) Sharing data client/server
