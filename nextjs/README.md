@@ -169,4 +169,9 @@
 
     There are ways to only run a Client Components on the browser this wil show up later in the browser so keep in mind ta add a fallback or loading state so it not causes unwanted behavior.
     
+## Documentation
+Official [Nextjs]([https://react.dev/reference/react](https://nextjs.org/docs)) documentation.
+
+## Resources
+[https://nextjs.org/blog](https://nextjs.org/blog)
 
