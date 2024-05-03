@@ -11,12 +11,14 @@
   1. [Quotes](#quotes)
   1. [Spacing](#spacing)
   1. [CSS](#css)
-  1. [Mutability & dependencies](#mutability-dependencies)
+  1. [Mutability](#mutability)
+  1. [Plugins](#plugins)
    
 ## Basic rules
   <a name="basic-rules"></a><a name="1.1"></a>
+  - Only use functional components, no class based components.
   - Only include one React component per file.
-
+  - Keep your code clean and readable.
 
 ## Component structure
   <a name="component-structure"></a><a name="1.1"></a>
@@ -200,17 +202,9 @@
     ```
     
 ## Mutability
-  <a name="mutability-dependencies"></a><a name="7.1"></a>
-  - [7.1](#mutability-dependencies) Mutability & dependencies
 
-    
-    ```javascript
-
-  
-    ```
-    
-  <a name="hook-dependencies"></a><a name="7.2"></a>
-  - [7.2](#hook-dependencies) Dependencies in React
+  <a name="mutabilitys"></a><a name="7.1"></a>
+  - [7.1](#mutabilitys) Mutability in React
 
     ```javascript
     
@@ -249,10 +243,21 @@
 
     ```
     > React compares the values in the dependency array when there is a change the hook wil trigger but for objects or array only the reference is checked not the content of an object or array. So make shure an array or object is cloned.
+
+## Plugins
+  <a name="plugins"></a><a name="7.1"></a>
+  - [7.1](#plugins) Plugins usage
+   
+    Try to keep the use of external plugins to a minimum, plugins can have a load of overhead code what will result in larger bundle sizes. The more plugins the more dependencies you create to other projects. 
+    
     
 ## Choices
 - CSS Modules
+  
 - No typescript
 
 ## Documentation
 Official [React](https://react.dev/reference/react) documentation.
+
+## Resources
+[React 19 beta](https://react.dev/blog/2024/04/25/react-19)
