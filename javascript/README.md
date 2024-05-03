@@ -436,9 +436,7 @@
     ```
     
 ## Documentation
-  
-   [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+Official [Javascript]([https://react.dev/reference/react](https://developer.mozilla.org/en-US/docs/Web/JavaScript)) documentation.
 
 ## Resources
-
 Javascript proposals for future js functionalities [https://github.com/tc39/proposals](https://github.com/tc39/proposals)
