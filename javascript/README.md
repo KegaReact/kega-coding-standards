@@ -8,8 +8,8 @@
   1. [Functions](#functions)
   1. [Destructuring](#destructuring)
   1. [Comparison Operators & Equality](#comparison-operators--equality)
-     
-  ## Whitespace
+
+## Whitespace
   <a name="whitespace--spaces"></a><a name="1.1"></a>
   - [1.1](#whitespace--spaces) Use soft tabs (space character) set to 4 spaces. eslint: [`indent`](https://eslint.org/docs/rules/indent)
    
@@ -42,7 +42,7 @@
     const array = [ 0, 1, 2, 3 ];
     ```
     
-  ## Variable
+## Variable
   <a name="variables--const"></a><a name="2.1"></a>
   - [2.1](#variables--const) Always use `const` or `let` to declare variables. avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
 
@@ -434,5 +434,11 @@
     }
   
     ```
-
     
+## Documentation
+  
+   [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+## Resources
+
+Javascript proposals for future js functionalities [https://github.com/tc39/proposals](https://github.com/tc39/proposals)
