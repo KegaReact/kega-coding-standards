@@ -51,23 +51,6 @@
   <a name="page-directory-structure"></a><a name="1.3"></a>
   - [1.3](#page-directory-structure) Page directory structure
 
-    There are 2 options we need to make a choice
-
-    ```
-    .
-    ├── ...
-    ├── [...contentSlugs]
-    │   ├── page.js
-    │   ├── page.module.css
-    │   ├── content
-    │   │   ├── Content.js
-    │   │   └── Content.module.css
-    │   └── prductlist
-    │       ├── ProductList.js
-    │       └── ProductList.module.css
-    └── ...
-    ```
-
     ```
     .
     ├── ...
