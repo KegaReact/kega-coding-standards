@@ -66,6 +66,34 @@
     │           └── ProductList.module.css
     └── ...
     ```
+    <a name="layout-directory-structure"></a><a name="1.4"></a>
+  - [1.4](#layout-directory-structure) Layout directory structure
+
+    ```
+    .
+    ├── ...
+    ├── app
+    │   └── [storeCode]
+    │       ├── (default)
+    │       │   ├── layout.js
+    │       │   ├── layout.module.css
+    │       │   └── layout
+    │       │       └── header
+    │       │       │   ├──  Header.js
+    │       │       │   └──  Header.module.css
+    │       │       └── footer
+    │       │           ├──  Footer.js
+    │       │           └──  Footer.module.css
+    │       └── (minimal)
+    │           ├── layout.js
+    │           ├── layout.module.css
+    │           └── layout
+    │               └── header
+    │                   ├──  MinimalHeader.js
+    │                   └──  MinimalHeader.module.css
+    └── ...
+    ```
+    
     
 ## File naming
   <a name="file-naming"></a><a name="2.1"></a>
@@ -94,7 +122,7 @@
     │   └── [storeCode]
     │       └── account
     │           ├── details
-    │           ├── layout.moduel.css
+    │           ├── layout.module.css
     │           ├── layout.js
     │           ├── page.js
     │           └── page.module.css
