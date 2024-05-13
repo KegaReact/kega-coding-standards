@@ -79,18 +79,18 @@
     │       │   ├── layout.module.css
     │       │   └── layout
     │       │       └── header
-    │       │       │   ├──  Header.js
-    │       │       │   └──  Header.module.css
+    │       │       │   ├── Header.js
+    │       │       │   └── Header.module.css
     │       │       └── footer
-    │       │           ├──  Footer.js
-    │       │           └──  Footer.module.css
+    │       │           ├── Footer.js
+    │       │           └── Footer.module.css
     │       └── (minimal)
     │           ├── layout.js
     │           ├── layout.module.css
     │           └── layout
     │               └── header
-    │                   ├──  MinimalHeader.js
-    │                   └──  MinimalHeader.module.css
+    │                   ├── MinimalHeader.js
+    │                   └── MinimalHeader.module.css
     └── ...
     ```
   <a name="module-directory-structure"></a><a name="1.5"></a>
