@@ -18,7 +18,7 @@
     ├── ...
     ├── src
     │   ├── app            # Nextjs routing files & site structure
-    │   ├── components     # Reusable components lin eProductTile
+    │   ├── components     # Reusable components like ProductTile
     │   ├── config         # Site config
     │   ├── elements       # Small dumb elemnts used to build components like Button/Icon
     │   ├── css            # Main css of the site
