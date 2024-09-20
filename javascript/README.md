@@ -299,7 +299,7 @@
     const { firstname, lastname } = user; // Cannot destructure property 'firstname' of 'user' as it is undefined.
     
     // good
-    const { firstname='', lastname='' } = user || {}; 
+    const { firstname = '', lastname = '' } = user || {}; 
     ```
   <a name="destructuring--object-alias"></a><a name="6.5"></a>
   - [6.5](#destructuring--object-fallback) Use aliases when there is a name collision
@@ -307,7 +307,7 @@
     ```javascript
     const user = { firstname: 'Tim', lastname: 'Honders' }
 
-    const { firstname: firtnameAlias, lastname='' } = user || {}; 
+    const { firstname: firtnameAlias, lastname = '' } = user || {}; 
     ```
 
 - For more information refer to [Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
