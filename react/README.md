@@ -103,7 +103,7 @@
      const Component = ({ name, optional }) => { }
 
      // good
-     const Component = ({ name, optional=false }) => { }
+     const Component = ({ name, optional = false }) => { }
     ```
     > If the prop isn't set it will be undefined this can cause problems.
 ## Alignment
@@ -153,12 +153,12 @@
     <Component style={{left:'20px'}} />
     <Component style={ {left:'20px'} } />
     
-    const Component = ( { name, optional = false } ) => { }
+    const Component = ( { name, optional=false } ) => { }
 
     // good
     <Component style={{ left: '20px' }} />
     
-    const Component = ({ name, optional=false }) => { }
+    const Component = ({ name, optional = false }) => { }
     ```
 
     > Try to space your props as shown above. all code bases have consistent readable code.
