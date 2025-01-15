@@ -125,7 +125,7 @@
     │   └── [storeCode]
     │       └── account
     │           ├── details
-    │           ├── Navigation.moduel.css
+    │           ├── Navigation.module.css
     │           ├── layout.js
     │           ├── page.js
     │           └── OverviewPage.module.css
