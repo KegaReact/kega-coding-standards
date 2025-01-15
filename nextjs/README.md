@@ -151,20 +151,8 @@
   <a name="component-naming"></a><a name="2.2"></a>
   - [2.2](#component-naming) Component naming of reserved files (page.js)
 
-    There are 2 options we need to make a choice, in de js naming convention we decidet that the filenam needs to be te same as the Component name.
-    The problem in Nextjs is ther wil be a lot of the same file names page.js this wil make it hard to se witch file is open in youre code editor.
-    So we have 2 options:
-    
-    ```javascript
-    
-    // page.js
-    import classes from './page.module.css';
-    
-    cons Page = () => {
-    }
-    
-    ```
-
+    The problem in Nextjs is ther wil be a lot of the same file names page.js this wil make it hard to se witch file is open in youre code editor, so to clarify this give the component the name it represents.
+  
     ```javascript
     
     // page.js
