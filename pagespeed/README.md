@@ -5,25 +5,47 @@
 
 ## Performance
 
+### Images
   <a name="image-format"></a><a name="1.1"></a>
   - [1.1](#image-format) Use next generation image formats when possible, WebP is recommened based on avif browser [`compatibility`](https://caniuse.com/avif) issues. [`Serve images in modern formats`](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/?utm_source=lighthouse&utm_medium=lr)
    
-    > Why? The images will a smaller and will be loading faster, most CDN's support generating WEPP Images.
+    > Why? The images will be smaller and wil load faster., most CDN's support generating WebP Images.
+
 
   <a name="image-sizes"></a><a name="1.2"></a>
-  - [1.2](#image-sizes) Use responsive images when possible. [`Properly size images`](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/?utm_source=lighthouse&utm_medium=lr)
+  - [1.2](#image-sizes) Use responsive images, for different resolutions when possible. [`Properly size images`](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/?utm_source=lighthouse&utm_medium=lr)
 
+    > Why? When u serve images for different resolutions/devices, the actual image is loaded is not larger than is rendered.
 
-- Bundeling
+    It is not posible to serve an image for every resolution so based on desing pick the breakpoints for example mobile,tablet,desktop,large desktop.
 
-- DOM size
+    Trick for boosting pagespeed numbers add 412 & 1350 as resolutions, pagespeed uses those resolutions for measuring
 
-- Thirt party scripts
+  
+  <a name="image-loading"></a><a name="1.3"></a>
+  - [1.3](#image-loading) Lazyload all images that are offscreen. [`Defer offscreen images`](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images)
 
-Accessibility
+    > Why? If images are not lazyloaded it can block loading other critical recoureces.
 
-Best Practices
+    All images onscreen set the loading attribute to eager and for the first image fetchpriority to high so it gets the highest priority.
+    ```html
+    <img loading="eager" width="1200" height="600" fetchpriority="high" src="https://cdn.images.com/largeimage.jpt?width=1200&height=600format=webp">
+    ```
+    All offscreen images should have the loading attribute to lazy, don't forget logo's, icons in the footer.
+    ```html
+    <img loading="lazy" width="1200" height="600" src="https://cdn.images.com/largeimage.jpt?width=1200&height=600format=webp">
+    ```
 
-SEO
+### Bundeling
+
+### DOM size
+
+### Thirt party scripts
+
+## Accessibility
+
+## Best Practices
+
+## SEO
 
 
