@@ -20,7 +20,7 @@
 
     > Why? When u serve images for different resolutions/devices, the actual image is loaded is not larger than is rendered.
 
-    It is not posible to serve an image for every resolution so based on desing pick the breakpoints for example mobile,tablet,desktop,large desktop.
+    It is not possible to serve an image for every resolution so based on design pick the breakpoints for example mobile,tablet,desktop.
 
     Trick for boosting pagespeed numbers add 412 & 1350 as resolutions, pagespeed uses those resolutions for measuring.
 
