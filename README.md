@@ -8,3 +8,4 @@ The goal of this coding standards is to ensure consistency and readability acros
   - [Javascript](javascript/)
   - [React](react/)
   - [Nextjs](nextjs/)
+  - [PageSpeed](pagespeed/)
