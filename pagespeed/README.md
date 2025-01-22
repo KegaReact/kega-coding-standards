@@ -22,7 +22,20 @@
 
     It is not posible to serve an image for every resolution so based on desing pick the breakpoints for example mobile,tablet,desktop,large desktop.
 
-    Trick for boosting pagespeed numbers add 412 & 1350 as resolutions, pagespeed uses those resolutions for measuring
+    Trick for boosting pagespeed numbers add 412 & 1350 as resolutions, pagespeed uses those resolutions for measuring.
+
+    ```html
+    <!-- min-width can differ based on design -->
+    
+    <picture>
+     <source media="(min-width:1440px)" srcset="https://cdn.images.com/largeimage.jpg?width=1200&height=600format=webp" type="image/webp">
+     <source media="(min-width:1350px)" srcset="https://cdn.images.com/largeimage.jpg?width=1350&height=675format=webp" type="image/webp">
+     <source media="(min-width:1024px)" srcset="https://cdn.images.com/largeimage.jpg?width=1024&height=512format=webp" type="image/webp">
+     <source media="(min-width:768px)" srcset="https://cdn.images.com/largeimage.jpg?width=768&height=384format=webp" type="image/webp">
+     <source media="(min-width:412px)" srcset="https://cdn.images.com/largeimage.jpg?width=412&height=206format=webp" type="image/webp">
+     <img loading="eager" width="1200" height="600" fetchpriority="high" src="https://cdn.images.com/largeimage.jpg?width=1200&height=600format=webp">
+    </picture>
+    ```
 
   <a name="image-loading"></a><a name="1.3"></a>
   - [1.3](#image-loading) Image loading.
@@ -33,11 +46,11 @@
 
     All images onscreen set the loading attribute to eager and for the first image fetchpriority to high so it gets the highest priority.
     ```html
-    <img loading="eager" width="1200" height="600" fetchpriority="high" src="https://cdn.images.com/largeimage.jpt?width=1200&height=600format=webp">
+    <img loading="eager" width="1200" height="600" fetchpriority="high" src="https://cdn.images.com/largeimage.jpg?width=1200&height=600format=webp">
     ```
     All offscreen images should have the loading attribute to lazy, don't forget logo's, icons in the footer.
     ```html
-    <img loading="lazy" width="1200" height="600" src="https://cdn.images.com/largeimage.jpt?width=1200&height=600format=webp">
+    <img loading="lazy" width="1200" height="600" src="https://cdn.images.com/largeimage.jpg?width=1200&height=600format=webp">
     ```
 
 ### Bundeling
