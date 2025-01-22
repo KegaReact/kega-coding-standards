@@ -6,7 +6,7 @@
 ## Performance
 
   <a name="image-format"></a><a name="1.1"></a>
-  - [1.1](#image-format) Use next generation image formats when possible, WebP is recommened based on browser [`compatibility`](https://caniuse.com/avif) issues. [`Serve images in modern formats`](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/?utm_source=lighthouse&utm_medium=lr)
+  - [1.1](#image-format) Use next generation image formats when possible, WebP is recommened based on avif browser [`compatibility`](https://caniuse.com/avif) issues. [`Serve images in modern formats`](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/?utm_source=lighthouse&utm_medium=lr)
    
     > Why? The images will ar smaller and wil be loading faster.
 
