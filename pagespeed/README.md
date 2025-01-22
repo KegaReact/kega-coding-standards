@@ -7,13 +7,16 @@
 
 ### Images
   <a name="image-format"></a><a name="1.1"></a>
-  - [1.1](#image-format) Use next generation image formats when possible, WebP is recommened based on avif browser [`compatibility`](https://caniuse.com/avif) issues. [`Serve images in modern formats`](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/?utm_source=lighthouse&utm_medium=lr)
+  - [1.1](#image-format) Next generation image.
+    
+    Use next generation image formats when possible, WebP is recommened based on avif browser [`compatibility`](https://caniuse.com/avif) issues. [`Serve images in modern formats`](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/?utm_source=lighthouse&utm_medium=lr)
    
     > Why? The images will be smaller and wil load faster., most CDN's support generating WebP Images.
 
-
   <a name="image-sizes"></a><a name="1.2"></a>
-  - [1.2](#image-sizes) Use responsive images, for different resolutions when possible. [`Properly size images`](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/?utm_source=lighthouse&utm_medium=lr)
+  - [1.2](#image-sizes) Responsive images
+  
+    Use responsive images, for different resolutions when possible. [`Properly size images`](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/?utm_source=lighthouse&utm_medium=lr)
 
     > Why? When u serve images for different resolutions/devices, the actual image is loaded is not larger than is rendered.
 
@@ -21,9 +24,10 @@
 
     Trick for boosting pagespeed numbers add 412 & 1350 as resolutions, pagespeed uses those resolutions for measuring
 
-  
   <a name="image-loading"></a><a name="1.3"></a>
-  - [1.3](#image-loading) Lazyload all images that are offscreen. [`Defer offscreen images`](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images)
+  - [1.3](#image-loading) Image loading.
+  
+    Lazyload all images that are offscreen. [`Defer offscreen images`](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images)
 
     > Why? If images are not lazyloaded it can block loading other critical recoureces.
 
