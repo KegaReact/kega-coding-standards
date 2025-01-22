@@ -2,6 +2,7 @@
 
 ## Table of Contents
   1. [Performance](#performance)
+  1. [Bundeling](#bundeling)
 
 ## Performance
 
@@ -28,12 +29,12 @@
     <!-- min-width can differ based on design -->
     
     <picture>
-     <source media="(min-width:1440px)" srcset="https://cdn.images.com/largeimage.jpg?width=1200&height=600format=webp" type="image/webp">
-     <source media="(min-width:1350px)" srcset="https://cdn.images.com/largeimage.jpg?width=1350&height=675format=webp" type="image/webp">
-     <source media="(min-width:1024px)" srcset="https://cdn.images.com/largeimage.jpg?width=1024&height=512format=webp" type="image/webp">
-     <source media="(min-width:768px)" srcset="https://cdn.images.com/largeimage.jpg?width=768&height=384format=webp" type="image/webp">
-     <source media="(min-width:412px)" srcset="https://cdn.images.com/largeimage.jpg?width=412&height=206format=webp" type="image/webp">
-     <img loading="eager" width="1200" height="600" fetchpriority="high" src="https://cdn.images.com/largeimage.jpg?width=1200&height=600format=webp">
+     <source media="(min-width:1440px)" srcset="https://cdn.images.com/largeimage.jpg?width=1200&height=600&format=webp" type="image/webp">
+     <source media="(min-width:1350px)" srcset="https://cdn.images.com/largeimage.jpg?width=1350&height=675&format=webp" type="image/webp">
+     <source media="(min-width:1024px)" srcset="https://cdn.images.com/largeimage.jpg?width=1024&height=512&format=webp" type="image/webp">
+     <source media="(min-width:768px)" srcset="https://cdn.images.com/largeimage.jpg?width=768&height=384&format=webp" type="image/webp">
+     <source media="(min-width:412px)" srcset="https://cdn.images.com/largeimage.jpg?width=412&height=206&format=webp" type="image/webp">
+     <img loading="eager" width="1200" height="600" fetchpriority="high" src="https://cdn.images.com/largeimage.jpg?width=1200&height=600&format=webp">
     </picture>
     ```
 
@@ -46,14 +47,25 @@
 
     All images onscreen set the loading attribute to eager and for the first image fetchpriority to high so it gets the highest priority.
     ```html
-    <img loading="eager" width="1200" height="600" fetchpriority="high" src="https://cdn.images.com/largeimage.jpg?width=1200&height=600format=webp">
+    <img loading="eager" width="1200" height="600" fetchpriority="high" src="https://cdn.images.com/largeimage.jpg?width=1200&height=600&format=webp">
     ```
     All offscreen images should have the loading attribute to lazy, don't forget logo's, icons in the footer.
     ```html
-    <img loading="lazy" width="1200" height="600" src="https://cdn.images.com/largeimage.jpg?width=1200&height=600format=webp">
+    <img loading="lazy" width="1200" height="600" src="https://cdn.images.com/largeimage.jpg?width=1200&height=600&format=webp">
     ```
+    If u need to boost the loading of an image further, you can use link preloading in the head.
 
+    ```js
+    import ReactDOM from 'react-dom';
+    ReactDOM.preload(url, { as: 'image' })
+    ```
+    
+    ```html
+    <link rel="preload" href="https://cdn.images.com/largeimage.jpg?width=1200&height=600&format=webp" as="image">
+    ```
+    
 ### Bundeling
+
 
 ### DOM size
 
