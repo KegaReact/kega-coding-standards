@@ -566,10 +566,10 @@ React DOM provides APIs to hint the browser about resources it will need, reduci
     ```jsx
     import { prefetchDNS } from 'react-dom';
     
-    function App() {
+    const MetaResources = () => {
       prefetchDNS("https://cdn.example.com");
       prefetchDNS("https://analytics.example.com");
-      return ...;
+      return null;
     }
     ```
 
