@@ -11,6 +11,8 @@ A good PageSpeed score directly impacts SEO rankings. Google uses Core Web Vital
   1. [Third party scripts](#third-party-scripts)
   1. [Resource preloading](#resource-preloading)
   1. [Accessibility](#accessibility)
+  1. [Console errors](#console-errors)
+  1. [Tips & Tricks](#tips--tricks)
 
 ## Testing
 
@@ -718,12 +720,35 @@ Accessibility is a key component of PageSpeed scoring. Lighthouse measures acces
     <a href="/contact">Click here</a>
     ```
 
+## Console errors
+
+Console errors indicate JavaScript problems that can break functionality and negatively impact performance scores.
+
+  <a name="console-errors"></a><a name="8.1"></a>
+  - [8.1](#console-errors) Fix all console errors
+  
+    Ensure your application runs without JavaScript errors in the browser console. [`No browser errors logged to the console`](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+
+    > Why? Console errors indicate broken JavaScript that can block rendering, cause layout shifts, and prevent functionality from working. Lighthouse flags console errors as a best practices issue, directly impacting your score.
+
+    ✅ **Do:**
+    - Check the browser console regularly during development
+    - Fix all errors before deploying to production
+    - Set up error monitoring (e.g., Sentry) to catch production errors
+    - Test error boundaries to handle failures gracefully
+
+    🚫 **Don't:**
+    - Ignore console errors during development
+    - Deploy code with known JavaScript errors
+    - Leave `console.log` statements in production code
+    - Catch errors silently without proper handling
+
 ## Tips & Tricks
 
 Quick wins and practical tips for improving PageSpeed scores.
 
-  <a name="tips-debugging"></a><a name="7.1"></a>
-  - [7.1](#tips-debugging) Debugging performance issues
+  <a name="tips-debugging"></a><a name="9.1"></a>
+  - [9.1](#tips-debugging) Debugging performance issues
   
     Tools and techniques for finding performance bottlenecks:
 
@@ -741,8 +766,8 @@ Quick wins and practical tips for improving PageSpeed scores.
     - Use **Network** tab with "Slow 3G" throttling to simulate real conditions
     - Check **Rendering** panel for layout shifts (enable "Layout Shift Regions")
 
-  <a name="tips-region"></a><a name="7.2"></a>
-  - [7.2](#tips-region) Deploy near PageSpeed test servers
+  <a name="tips-region"></a><a name="9.2"></a>
+  - [9.2](#tips-region) Deploy near PageSpeed test servers
   
     PageSpeed Insights runs tests from servers located in the United States. Deploying your application to a US region can improve your test scores.
 
@@ -754,8 +779,8 @@ Quick wins and practical tips for improving PageSpeed scores.
     }
     ```
 
-  <a name="tips-lighthouse-detection"></a><a name="7.3"></a>
-  - [7.3](#tips-lighthouse-detection) Detect Lighthouse to hide interfering elements
+  <a name="tips-lighthouse-detection"></a><a name="9.3"></a>
+  - [9.3](#tips-lighthouse-detection) Detect Lighthouse to hide interfering elements
   
     Use user-agent detection to hide cookie banners, popups, or other elements that negatively impact PageSpeed scores during Lighthouse tests.
 
@@ -768,8 +793,8 @@ Quick wins and practical tips for improving PageSpeed scores.
 
     > ⚠️ Note: This is a legitimate optimization technique. You're not hiding broken functionality—you're removing non-essential overlays that don't affect core page content.
 
-  <a name="tips-common-issues"></a><a name="7.4"></a>
-  - [7.4](#tips-common-issues) Common issues and fixes
+  <a name="tips-common-issues"></a><a name="9.4"></a>
+  - [9.4](#tips-common-issues) Common issues and fixes
   
     | Issue | Likely cause | Fix |
     |-------|--------------|-----|
