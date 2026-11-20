@@ -6,6 +6,7 @@ The goal of this coding standards is to ensure consistency and readability acros
 
 ## Standards
   - [Javascript](javascript/)
+  - [Typescript](typescript/)
   - [React](react/)
   - [Nextjs](nextjs/)
   - [PageSpeed](pagespeed/)

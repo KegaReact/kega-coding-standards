@@ -256,12 +256,10 @@
 
   Also for developer this is better way to learn or keep knowledge of pure css and not one specific library.
   
-- No typescript
-  Swiching to typescript wil bring more complexity an wil add a learning curve for new and existing developers. Also it wil change the syntax of the new codebase's. 
+- Typescript
+  Typescript is allowed in React projects. It finds bugs before the code runs and makes the code easier to understand for other developers, because every prop and function shows what it expects.
 
-  At this time the cons ate out weighing the benefits.
-
-  If the is a need for typesafty in the future we need to research if we wan't typescript or a sulotion like JSDOC. 
+  When a project uses Typescript, follow the [Typescript](../typescript/) standard. Use `.tsx` for components and give the props of every component an interface.
 
 ## Documentation
 Official [React](https://react.dev/reference/react) documentation.

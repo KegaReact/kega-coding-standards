@@ -12,6 +12,7 @@ Here we write documentation of best practices within our company
 .
 ├── ...
 ├── javascript      # Javascript coding standard
+├── typescript      # Typescript coding standard
 ├── react           # React coding standard
 ├── nextjs          # NextJs coding standard
 ├── pagespeed       # Best practises for getting the best pagespeed score
